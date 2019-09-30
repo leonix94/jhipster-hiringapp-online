@@ -1,0 +1,24 @@
+{
+  "hiringAppOnlineApp": {
+    "candidate": {
+      "home": {
+        "title": "Candidates",
+        "createLabel": "Genera un nuovo Candidate",
+        "createOrEditLabel": "Genera o modifica un Candidate",
+        "notFound": "No Candidates found"
+      },
+      "created": "&Egrave; stato generato un nuovo Candidate con identificatore {{ param }}",
+      "updated": "&Egrave; stato aggiornato Candidate identificato da {{ param }}",
+      "deleted": "&Egrave; stato eliminato Candidate con identificatore {{ param }}",
+      "delete": {
+        "question": "Sei sicuro di volere eliminare Candidate {{ id }}?"
+      },
+      "detail": {
+        "title": "Candidate"
+      },
+      "name": "Name",
+      "surname": "Surname",
+      "document": "Document"
+    }
+  }
+}

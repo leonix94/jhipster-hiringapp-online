@@ -42,6 +42,9 @@ public class CacheConfiguration {
             createCache(cm, it.next.hiringapp.domain.User.class.getName());
             createCache(cm, it.next.hiringapp.domain.Authority.class.getName());
             createCache(cm, it.next.hiringapp.domain.User.class.getName() + ".authorities");
+            createCache(cm, it.next.hiringapp.domain.Candidate.class.getName());
+            createCache(cm, it.next.hiringapp.domain.Document.class.getName());
+            createCache(cm, it.next.hiringapp.domain.Content.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }
