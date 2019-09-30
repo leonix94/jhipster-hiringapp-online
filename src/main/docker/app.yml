@@ -1,0 +1,16 @@
+version: '2'
+services:
+  hiringapponline-app:
+    image: hiringapponline
+    environment:
+      - _JAVA_OPTIONS=-Xmx512m -Xms256m
+      - SPRING_PROFILES_ACTIVE=prod,swagger
+      - MANAGEMENT_METRICS_EXPORT_PROMETHEUS_ENABLED=true
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://hiringapponline-postgresql:5432/HiringAppOnline
+      - JHIPSTER_SLEEP=30 # gives time for other services to boot before the application
+    ports:
+      - 8080:8080
+  hiringapponline-postgresql:
+    extends:
+      file: postgresql.yml
+      service: hiringapponline-postgresql
