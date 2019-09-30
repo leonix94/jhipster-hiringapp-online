@@ -1,0 +1,22 @@
+entity Candidate {
+  name String required
+  surname String required
+}
+
+entity Document {
+  title String required
+  size Long required
+  mimeType String
+}
+
+entity Content {
+  data Blob required
+}
+
+relationship OneToOne {
+  Document{content} to Content{document(id) required}
+}
+
+relationship OneToOne {
+  Candidate{document} to Document{car(id) required}
+}
