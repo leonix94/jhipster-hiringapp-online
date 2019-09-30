@@ -1,0 +1,50 @@
+{
+    "name": "Document",
+    "fields": [
+        {
+            "fieldName": "title",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "size",
+            "fieldType": "Long",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "mimeType",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "content",
+            "otherEntityRelationshipName": "document",
+            "relationshipName": "content",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "candidate",
+            "otherEntityRelationshipName": "document",
+            "relationshipValidateRules": "required",
+            "relationshipName": "car",
+            "ownerSide": false
+        }
+    ],
+    "changelogDate": "20190930143239",
+    "entityTableName": "document",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}
